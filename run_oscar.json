@@ -1,0 +1,107 @@
+{
+    "id": "run_oscar",
+    "summary": "Run an external OSCAR service.",
+    "description": "Run an external docker-based OSCAR service.",
+    "categories": [
+        "oscar",
+        "service"
+    ],
+    "experimental": true,
+    "parameters": [
+        {
+            "name": "token_env_var",
+            "description": "OpenEO auth token environment variable.",
+            "schema": {
+                "title": "token-env-var",
+                "type": "string",
+                "subtype": "string",
+                "pattern": "^[a-zA-Z0-9_\\-\\.]+$"
+            }
+        },
+        {
+            "name": "oscar_endpoint",
+            "description": "The URL of the OSCAR service.",
+            "schema": {
+                "title": "oscar-url",
+                "type": "string",
+                "format": "url",
+                "subtype": "url",
+                "pattern": "^https?://"
+            }
+        },
+        {
+            "name": "service",
+            "description": "The OSCAR service to be executed.",
+            "schema": {
+                "title": "service",
+                "type": "string",
+                "subtype": "string"
+            }
+        },
+        {
+            "name": "output",
+            "description": "The output path for the result.",
+            "schema": {
+                "title": "output",
+                "type": "string",
+                "subtype": "string"
+            }
+        },
+        {
+            "name": "input_file",
+            "description": "input file to be uploaded.",
+            "schema": {
+                "title": "input-file",
+                "type": "string",
+                "subtype": "string"
+            }
+        },
+        {
+            "name": "service_config",
+            "description": "Optional configuration for the OSCAR service.",
+            "optional": true,
+            "schema": {
+                "title": "service-config",
+                "type": "object",
+                "subtype": "json"
+            }
+        }
+    ],
+    "returns": {
+        "description": "The output file path resulting from the OSCAR service.",
+        "schema": {
+            "type": "string",
+            "subtype": "string"
+        }
+    },
+    "exceptions": {
+        "OscarNotAvailable": {
+            "description": "The OSCAR service is not available."
+        },
+        "OscarUrlError": {
+            "description": "The OSCAR URL is not valid or cannot be reached."
+        },
+        "OscarServiceNotFound": {
+            "description": "The specified OSCAR service is not found."
+        },
+        "OscarServiceCreationError": {
+            "description": "The OSCAR service creation failed."
+        },
+        "MinioConnectionError": {
+            "description": "The MinIO connection failed."
+        },
+        "MinioUploadError": {
+            "description": "The MinIO upload failed."
+        },
+        "MinioDownloadError": {
+            "description": "The MinIO download failed."
+        }
+    },
+    "links": [
+        {
+            "href": "https://docs.oscar.grycap.net/",
+            "rel": "about",
+            "title": "OSCAR documentation"
+        }
+    ]
+}
