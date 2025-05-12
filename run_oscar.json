@@ -58,7 +58,7 @@
         },
         {
             "name": "service_config",
-            "description": "Optional configuration for the OSCAR service.",
+            "description": "Optional configuration for the OSCAR service if not available",
             "optional": true,
             "schema": {
                 "title": "service-config",
