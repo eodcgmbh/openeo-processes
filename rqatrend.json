@@ -23,7 +23,7 @@
         },
         {
             "name": "threshold",
-            "description": "Describe threshold",
+            "description": "Threshold value for the RQA calculation",
             "schema": {
                 "type": "number"
             },
@@ -32,18 +32,18 @@
         },
         {
             "name": "border",
-            "description": "Describe border",
+            "description": "Border size for the RQA calculation",
             "schema": {
-                "type": "number"
+                "type": "integer"
             },
             "default": 10,
             "optional": true
         },
         {
             "name": "theiler",
-            "description": "Describe theiler",
+            "description": "Theiler window size for the RQA calculation",
             "schema": {
-                "type": "number"
+                "type": "integer"
             },
             "default": 1,
             "optional": true
