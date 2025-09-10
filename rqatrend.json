@@ -23,29 +23,11 @@
         },
         {
             "name": "threshold",
-            "description": "Threshold value for the RQA calculation",
+            "description": "Maximum absolute difference between values of two time points to still consider as similar.",
             "schema": {
                 "type": "number"
             },
             "default": 0.5,
-            "optional": true
-        },
-        {
-            "name": "border",
-            "description": "Border size for the RQA calculation",
-            "schema": {
-                "type": "integer"
-            },
-            "default": 10,
-            "optional": true
-        },
-        {
-            "name": "theiler",
-            "description": "Theiler window size for the RQA calculation",
-            "schema": {
-                "type": "integer"
-            },
-            "default": 1,
             "optional": true
         },
         {
