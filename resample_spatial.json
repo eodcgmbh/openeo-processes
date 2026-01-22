@@ -97,6 +97,21 @@
             },
             "default": "near",
             "optional": true
+        },
+        {
+            "name": "align",
+            "description": "Specifies to which corner of the spatial extent the new resampled data is aligned to.",
+            "schema": {
+                "type": "string",
+                "enum": [
+                    "lower-left",
+                    "upper-left",
+                    "lower-right",
+                    "upper-right"
+                ]
+            },
+            "default": "upper-left",
+            "optional": true
         }
     ],
     "returns": {
